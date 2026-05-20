@@ -1,0 +1,29 @@
+<div class="manga-panel">
+    <span class="panel-tape pt1"></span>
+    <span class="panel-tape pt2"></span>
+    <span class="panel-tape pt3"></span>
+    <span class="panel-label">Latest Build Log</span>
+    {{#get "posts" limit="1" include="tags,authors"}}
+    <div class="panel-main">
+        {{#foreach posts}}
+        <span class="kicker">~ I broke it so you don't have to</span>
+        <h2>{{title}}</h2>
+        <p>{{excerpt words="30"}}</p>
+        <a href="{{url}}" class="read-more">Read the full log</a>
+        {{/foreach}}
+    </div>
+    {{/get}}
+    {{#get "posts" limit="4" include="tags,authors"}}
+    <div class="panel-side">
+        {{#foreach posts}}
+        <div class="mini-post">
+            {{#if primary_tag}}
+            <span class="tag">{{primary_tag.name}}</span>
+            {{/if}}
+            <h3>{{title}}</h3>
+            <span class="meta">{{date format="MMM D"}} / {{reading_time minute="1"}}</span>
+        </div>
+        {{/foreach}}
+    </div>
+    {{/get}}
+</div>

@@ -1,0 +1,33 @@
+{{!< default}}
+
+<div class="archive-wrap">
+    <div class="section-title-wrap" style="margin-left:0">
+        <span class="section-title" style="font-size:20px">The workshop logs</span>
+        <span class="marker-underline thick"></span>
+    </div>
+    <p style="font-size:14px;color:var(--fg);margin-bottom:20px;">Every build, every break, every lesson.</p>
+
+    <div class="archive-filters">
+        <button class="active" onclick="filterArchive('all',this)">All</button>
+        {{#get "tags" limit="all"}}
+            {{#foreach tags}}
+            <button onclick="filterArchive('{{slug}}',this)">{{name}}</button>
+            {{/foreach}}
+        {{/get}}
+    </div>
+
+    <ul class="archive-list" id="archive-list">
+        {{#foreach posts}}
+        <li data-cat="{{#if primary_tag}}{{primary_tag.slug}}{{/if}}">
+            <span class="num">{{@number}}</span>
+            <div class="info">
+                <h4><a href="{{url}}" style="color:inherit;text-decoration:none">{{title}}</a></h4>
+                <div class="meta">{{date format="MMM D"}} / {{#if primary_tag}}{{primary_tag.name}} / {{/if}}{{reading_time minute="1"}}</div>
+            </div>
+            {{#if primary_tag}}
+            <span class="cat-badge">{{primary_tag.name}}</span>
+            {{/if}}
+        </li>
+        {{/foreach}}
+    </ul>
+</div>

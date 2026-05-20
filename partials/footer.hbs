@@ -1,0 +1,38 @@
+<footer>
+    <div class="footer-grid">
+        <div class="col">
+            <h5>{{@site.title}}</h5>
+            <p>A workshop notebook for things built, broken, and rebuilt. Robotics, software, CAD, AI, and the occasional 3D-printed disaster.</p>
+            <div class="social">
+                <a href="#" aria-label="GitHub">G</a>
+                <a href="#" aria-label="YouTube">Y</a>
+                <a href="#" aria-label="Twitter">X</a>
+                <a href="#" aria-label="Discord">D</a>
+            </div>
+        </div>
+        <div class="col">
+            <h5>Explore</h5>
+            <a href="{{@site.url}}">Home</a>
+            <a href="{{@site.url}}/archive/">Archive</a>
+            <a href="{{@site.url}}/about/">About</a>
+            <a href="{{@site.url}}/tags/">Tags</a>
+            <a href="{{@site.url}}/authors/">Authors</a>
+        </div>
+        <div class="col">
+            <h5>Categories</h5>
+            {{#get "tags" limit="all"}}
+                {{#foreach tags}}
+                <a href="{{url}}">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+        <div class="col">
+            <h5>More</h5>
+            <a href="{{@site.url}}/#/portal/">Membership</a>
+            <a href="{{@site.url}}/#/portal/">Newsletter</a>
+            <a href="{{@site.url}}/privacy/">Privacy Policy</a>
+            <a href="{{@site.url}}/contact/">Contact</a>
+        </div>
+    </div>
+    <div class="footer-stamp">Made in a workshop / Smoke & mistakes / Rewired with coffee and duct tape</div>
+</footer>

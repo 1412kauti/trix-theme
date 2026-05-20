@@ -1,0 +1,21 @@
+{{#get "posts" limit="3" filter="id:-{{../id}}" include="tags,authors"}}
+{{#if posts}}
+<div class="section-title-wrap" style="margin-left:0;margin-bottom:16px">
+    <span class="section-title" style="font-size:18px">More from the workshop</span>
+    <span class="marker-underline" style="height:8px"></span>
+</div>
+<div class="related-grid">
+    {{#foreach posts}}
+    <a href="{{url}}" class="related-card">
+        <div class="r-thumb">
+            {{#if feature_image}}
+            <img src="{{img_url feature_image size="s"}}" alt="{{title}}" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            {{/if}}
+        </div>
+        <h4>{{title}}</h4>
+        <div class="r-meta">{{date format="MMM D"}} / {{reading_time minute="1"}}</div>
+    </a>
+    {{/foreach}}
+</div>
+{{/if}}
+{{/get}}

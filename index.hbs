@@ -1,0 +1,45 @@
+{{!< default}}
+
+{{> hero}}
+
+<div class="section-title-wrap">
+    <span class="section-title">Fresh off the bench</span>
+    <span class="marker-underline"></span>
+</div>
+
+{{> manga-panel}}
+
+<div class="marquee-row">
+    <div class="marquee-inner">
+        <span>|</span><a href="#">Robotics</a><span>|</span><a href="#">Software</a><span>|</span><a href="#">AI/ML</a><span>|</span><a href="#">CAD</a><span>|</span><a href="#">3D Print</a><span>|</span><a href="#">Tips/Tricks</a><span>|</span><a href="#">Content</a>
+        <span>|</span><a href="#">Robotics</a><span>|</span><a href="#">Software</a><span>|</span><a href="#">AI/ML</a><span>|</span><a href="#">CAD</a><span>|</span><a href="#">3D Print</a><span>|</span><a href="#">Tips/Tricks</a><span>|</span><a href="#">Content</a>
+    </div>
+</div>
+
+<div class="section-title-wrap">
+    <span class="section-title">Featured builds</span>
+    <span class="marker-underline thick"></span>
+</div>
+
+<div class="post-grid">
+    {{#foreach posts}}
+    {{> post-card}}
+    {{/foreach}}
+</div>
+
+<div class="workshop-divider"></div>
+
+<div class="about-strip">
+    <div class="tape-piece top-center" style="--tape-angle:-0.5deg"></div>
+    <div class="initials-circle">
+        KT
+        <span class="sticker">hey!</span>
+    </div>
+    <div class="about-text">
+        <h3>Kauti — The Person Behind the Trix</h3>
+        <p>Robotics engineer by training, software bender by survival, 3D printing addict by choice. I break things on purpose so I can rebuild them better. This blog is my workshop notebook.</p>
+        <span class="annotation">yes, that's me. I'm a bit extra.</span>
+    </div>
+</div>
+
+{{> newsletter}}

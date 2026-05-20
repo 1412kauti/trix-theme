@@ -1,0 +1,56 @@
+{{!< default}}
+
+<div class="article-wrap">
+    <div class="breadcrumb">
+        <a href="{{@site.url}}">&larr; Workshop</a>
+        {{#foreach tags}}
+        <span style="color:var(--surface-4)"> / </span>
+        <a href="{{url}}">{{name}}</a>
+        {{/foreach}}
+        <span style="color:var(--surface-4)"> / </span>
+        Post
+    </div>
+
+    <div class="hero-img">
+        {{#if feature_image}}
+        <img src="{{img_url feature_image size="xl"}}" alt="{{title}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
+        {{else}}
+        <svg width="200" height="100" viewBox="0 0 200 100"><circle cx="100" cy="50" r="40" stroke="var(--steel)" stroke-width="1" fill="none" stroke-dasharray="4 4"/><path d="M60 50 L140 50 M100 10 L100 90" stroke="var(--steel)" stroke-width="0.5" stroke-dasharray="2 2"/></svg>
+        <span style="position:relative;z-index:1;opacity:0.7">[{{title}}]</span>
+        {{/if}}
+    </div>
+
+    <div class="article-header">
+        <span class="eyebrow">~ Build Log</span>
+        <h1>{{title}}</h1>
+        <p class="deck">{{excerpt}}</p>
+        <div class="byline">
+            <div class="avatar-sm">
+                {{#if author.profile_image}}
+                <img src="{{img_url author.profile_image size="xs"}}" alt="{{author.name}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+                {{else}}{{#if author.name}}{{truncate author.name 2 ""}}{{else}}KT{{/if}}{{/if}}
+            </div>
+            <span>{{author.name}} / {{date format="MMM D, YYYY"}} / {{reading_time minute="1"}}</span>
+        </div>
+    </div>
+
+    <div class="tag-list">
+        {{#foreach tags}}
+        <a href="{{url}}">{{name}}</a>
+        {{/foreach}}
+    </div>
+
+    <div class="article-layout">
+        {{> toc-sidebar}}
+
+        <div class="article-main">
+            <div class="article-body">
+                {{content}}
+            </div>
+
+            {{> author-card}}
+
+            {{> related-posts}}
+        </div>
+    </div>
+</div>

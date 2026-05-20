@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ghost_head}}
+    <link rel="stylesheet" href="{{asset "css/theme.css"}}">
+</head>
+<body class="{{body_class}}">
+
+<div class="search-overlay" id="search-overlay">
+    <button class="close-srch" onclick="closeSearch()" aria-label="Close search">X</button>
+    <input type="text" placeholder="Search the workshop logs..." id="search-input">
+</div>
+
+{{> header}}
+
+{{{body}}}
+
+{{> footer}}
+
+<script src="{{asset "js/theme.js"}}"></script>
+{{ghost_foot}}
+</body>
+</html>

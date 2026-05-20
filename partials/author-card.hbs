@@ -1,0 +1,17 @@
+{{#author}}
+<div class="author-card">
+    <div class="taped"></div>
+    <div class="avatar-lg">
+        {{#if profile_image}}
+        <img src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+        {{else}}{{#if name}}{{truncate name 2 ""}}{{else}}KT{{/if}}{{/if}}
+    </div>
+    <div class="info">
+        <h4>{{name}}</h4>
+        <p>{{bio}}</p>
+        {{#if location}}
+        <p style="color:var(--steel);font-size:12px;">{{location}}</p>
+        {{/if}}
+    </div>
+</div>
+{{/author}}
