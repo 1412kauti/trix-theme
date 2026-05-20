@@ -7,7 +7,7 @@
     <span class="measure-line"></span>
     <div>
         <h1>BUILD THINGS<br>THAT DON'T<br>COME BACK.</h1>
-        <div class="sub">Robotics / Software / AI / CAD / Content</div>
+        <div class="sub">{{#get "tags" limit="6"}}{{#foreach tags}}{{#if @first}}{{name}}{{else}} / {{name}}{{/if}}{{/foreach}}{{/get}}</div>
     </div>
     <span class="workbench-badge">[ REV 4 ]</span>
 </div>

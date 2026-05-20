@@ -24,17 +24,17 @@
 
 <div class="workshop-divider"></div>
 
-<div class="about-strip">
+<a href="{{@site.url}}/about/" class="about-strip" style="text-decoration:none;color:inherit">
     <div class="tape-piece top-center" style="--tape-angle:-0.5deg"></div>
     <div class="initials-circle">
         KT
         <span class="sticker">hey!</span>
     </div>
     <div class="about-text">
-        <h3>Kauti — The Person Behind the Trix</h3>
-        <p>Robotics engineer by training, software bender by survival, 3D printing addict by choice. I break things on purpose so I can rebuild them better. This blog is my workshop notebook.</p>
+        <h3>{{@site.title}} — The Person Behind the Trix</h3>
+        <p>{{@site.description}}</p>
         <span class="annotation">yes, that's me. I'm a bit extra.</span>
     </div>
-</div>
+</a>
 
 {{> newsletter}}

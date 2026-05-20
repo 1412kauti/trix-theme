@@ -4,10 +4,9 @@
             <h5>{{@site.title}}</h5>
             <p>A workshop notebook for things built, broken, and rebuilt. Robotics, software, CAD, AI, and the occasional 3D-printed disaster.</p>
             <div class="social">
-                <a href="#" aria-label="GitHub">G</a>
-                <a href="#" aria-label="YouTube">Y</a>
-                <a href="#" aria-label="Twitter">X</a>
-                <a href="#" aria-label="Discord">D</a>
+                {{#if @site.twitter_url}}<a href="{{@site.twitter_url}}" aria-label="Twitter" target="_blank" rel="noopener">X</a>{{/if}}
+                {{#if @site.facebook_url}}<a href="{{@site.facebook_url}}" aria-label="Facebook" target="_blank" rel="noopener">F</a>{{/if}}
+                {{#if @site.primary_author.website_url}}<a href="{{@site.primary_author.website_url}}" aria-label="Website" target="_blank" rel="noopener">W</a>{{/if}}
             </div>
         </div>
         <div class="col">
