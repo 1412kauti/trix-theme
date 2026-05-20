@@ -1,0 +1,32 @@
+{{#get "tags" limit="all" include="count.posts"}}
+<div class="tag-carousel" id="tag-carousel">
+    <span class="corner-tape tl"></span>
+    <span class="corner-tape tr"></span>
+    <span class="corner-tape bl"></span>
+    <span class="corner-tape br"></span>
+    <span class="sketch-label">~ tag index</span>
+    <span class="measure-line"></span>
+    <div class="carousel-viewport">
+        <div class="carousel-track">
+            {{#foreach tags}}
+            {{#if count.posts}}
+            <a href="{{url}}" class="carousel-slide">
+                <span class="cs-icon">{{#if accent_color}}{{accent_color}}{{else}}[+]{{/if}}</span>
+                <h3>{{name}}</h3>
+                {{#if description}}
+                <p>{{description}}</p>
+                {{else}}
+                <p class="cs-dflt">Build logs tagged with {{name}}</p>
+                {{/if}}
+                <span class="cs-count">{{count.posts}} {{#match count.posts "1"}}log{{else}}logs{{/match}}</span>
+            </a>
+            {{/if}}
+            {{/foreach}}
+        </div>
+    </div>
+    <button class="carousel-btn carousel-prev" aria-label="Previous">&larr;</button>
+    <button class="carousel-btn carousel-next" aria-label="Next">&rarr;</button>
+    <div class="carousel-dots" id="carousel-dots"></div>
+    <span class="workbench-badge">[ SLIDE / CLICK ]</span>
+</div>
+{{/get}}
