@@ -1,6 +1,7 @@
 {{!< default}}
 
 <div class="about-wrap">
+    {{#match @page.show_title_and_feature_image}}
     <div class="about-photo">
         <div class="tape-piece top-center"></div>
         <div class="photo-frame">
@@ -13,6 +14,20 @@
             <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
         </div>
     </div>
+    {{else}}
+    <div class="about-photo">
+        <div class="tape-piece top-center"></div>
+        <div class="photo-frame">
+            <span class="initials">KT</span>
+            <span class="sticker">it me</span>
+        </div>
+        <div class="about-intro">
+            <h2>{{title}}</h2>
+            <p>{{excerpt}}</p>
+            <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
+        </div>
+    </div>
+    {{/match}}
 
     <div class="section-title-wrap" style="margin-left:0">
         <span class="section-title" style="font-size:18px">What I do</span>

@@ -26,11 +26,11 @@
         <p class="deck">{{excerpt}}</p>
         <div class="byline">
             <div class="avatar-sm">
-                {{#if author.profile_image}}
-                <img src="{{img_url author.profile_image size="xs"}}" alt="{{author.name}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
-                {{else}}{{#if author.name}}{{truncate author.name 2 ""}}{{else}}KT{{/if}}{{/if}}
+                {{#if primary_author.profile_image}}
+                <img src="{{img_url primary_author.profile_image size="xs"}}" alt="{{primary_author.name}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+                {{else}}{{primary_author.name}}{{/if}}
             </div>
-            <span>{{author.name}} / {{date format="MMM D, YYYY"}} / {{reading_time minute="1"}}</span>
+            <span>{{primary_author.name}} / {{date format="MMM D, YYYY"}} / {{reading_time minute="1"}}</span>
         </div>
     </div>
 

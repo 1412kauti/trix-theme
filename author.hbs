@@ -8,7 +8,7 @@
             {{#if profile_image}}
             <img src="{{img_url profile_image size="m"}}" alt="{{name}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
             {{else}}
-            <span class="initials">{{#if name}}{{truncate name 2 ""}}{{else}}KT{{/if}}</span>
+            <span class="initials">{{#if name}}{{name}}{{else}}KT{{/if}}</span>
             {{/if}}
             <span class="sticker">maker</span>
         </div>
@@ -23,7 +23,7 @@
     {{/author}}
 
     <div class="section-title-wrap" style="margin-left:0">
-        <span class="section-title" style="font-size:18px">Build logs by {{author.name}}</span>
+        <span class="section-title" style="font-size:18px">Build logs by {{name}}</span>
         <span class="marker-underline thick"></span>
     </div>
 

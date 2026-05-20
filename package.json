@@ -2,7 +2,10 @@
   "name": "kautis-trix",
   "version": "1.0.0",
   "description": "Workshop garage maximalist theme — crooked, taped, blueprinted, unpolished on purpose.",
-  "author": "Kauti",
+  "author": {
+    "name": "Kauti",
+    "email": "1412kauti@users.noreply.github.com"
+  },
   "license": "MIT",
   "config": {
     "posts_per_page": 6,
