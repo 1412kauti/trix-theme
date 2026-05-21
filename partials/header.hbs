@@ -1,5 +1,8 @@
 <header>
     <a href="{{@site.url}}" class="logo-wrap">
+        {{#if @site.logo}}
+        <img src="{{@site.logo}}" alt="{{@site.title}}" class="logo-img">
+        {{else}}
         <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="50" r="45" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.4"/>
             <circle cx="50" cy="50" r="40" fill="#ff8800" stroke="#000000" stroke-width="2.5"/>
@@ -12,6 +15,7 @@
             <circle cx="66.5" cy="42" r="6" fill="#000000"/>
             <line x1="48.5" y1="42" x2="51.5" y2="42" stroke="#000000" stroke-width="4"/>
         </svg>
+        {{/if}}
         <span class="logo-text">{{@site.title}}</span>
     </a>
     <span class="sep">|</span>

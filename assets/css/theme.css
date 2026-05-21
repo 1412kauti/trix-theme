@@ -64,6 +64,7 @@ header{
 .logo-wrap:active{transform:scale(0.95)}
 .logo-wrap svg{flex-shrink:0;transition:0.3s}
 .logo-wrap:hover svg{transform:rotate(-15deg)}
+.logo-img{height:38px;width:auto;object-fit:contain;flex-shrink:0;border-radius:2px}
 .logo-text{
   font-family:var(--font-display);font-size:24px;letter-spacing:2px;color:var(--fg-bright);line-height:1;
   position:relative;
