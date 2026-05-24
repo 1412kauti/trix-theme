@@ -20,8 +20,8 @@
     </a>
     <span class="sep">|</span>
     <div class="nav-links">
-        {{#foreach @site.navigation}}
-        <a href="{{url absolute="true"}}" {{#if current}}class="active"{{/if}}>
+        {{#foreach navigation}}
+        <a href="{{url}}" {{#if current}}class="active"{{/if}}>
             <span class="tape-nav-main"></span>
             <span class="tape-nav-cross"></span>
             <span class="tape-nav-edge"></span>
