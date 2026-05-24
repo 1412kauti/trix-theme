@@ -1,114 +1,16 @@
 {{!< default}}
 
-<div class="about-wrap">
-    {{#if @page.show_title_and_feature_image}}
-    <div class="about-photo">
-        <div class="tape-piece top-center"></div>
-        <div class="photo-frame">
-            {{#if feature_image}}
-            <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
-            {{else}}
-            <span class="initials">KT</span>
-            {{/if}}
-            <span class="sticker">it me</span>
-        </div>
-        <div class="about-intro">
-            <h2>{{title}}</h2>
-            {{#if excerpt}}<p>{{excerpt}}</p>{{/if}}
-            <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
-        </div>
-    </div>
-    {{/if}}
-
-    <div class="about-narrative article-body">
-        {{content}}
+<div class="article-wrap">
+    <div class="article-header">
+        <h1>{{title}}</h1>
+        {{#if excerpt}}
+        <p class="deck">{{excerpt}}</p>
+        {{/if}}
     </div>
 
-    <div class="section-title-wrap" style="margin-left:0">
-        <span class="section-title" style="font-size:18px">What I do</span>
-        <span class="marker-underline"></span>
-    </div>
-    <div class="what-i-do">
-        <div class="card">
-            <span class="icon">|/|</span>
-            <h4>Robotics</h4>
-            <p>Six-axis arms, mobile platforms, ROS2, custom kinematics. If it moves and shouldn't, I've probably made it move worse first.</p>
-        </div>
-        <div class="card">
-            <span class="icon">[~]</span>
-            <h4>Software Engineering</h4>
-            <p>Rust, Go, Python, TypeScript. Systems programming, real-time control, developer tooling.</p>
-        </div>
-        <div class="card">
-            <span class="icon">[O]</span>
-            <h4>AI / ML</h4>
-            <p>Computer vision on edge devices, fine-tuning foundation models, defect detection. The model works until I thermal-image my coffee mug.</p>
-        </div>
-        <div class="card">
-            <span class="icon">[+]</span>
-            <h4>CAD &amp; 3D Printing</h4>
-            <p>FreeCAD, Fusion 360, KiCad. Voron 2.4, custom toolchanger, filament I shouldn't trust.</p>
-        </div>
-        <div class="card">
-            <span class="icon">~/</span>
-            <h4>Drawing &amp; Concepts</h4>
-            <p>Markers, ink, spray cans, digital. Workshop whiteboards are my canvas. Concepts start as doodles before they become CAD.</p>
-        </div>
-        <div class="card">
-            <span class="icon">|-|</span>
-            <h4>Content Creation</h4>
-            <p>Build logs, tutorials, failure compilations. I show the parts that broke so you don't have to break yours.</p>
-        </div>
-    </div>
-
-    <div class="skill-section">
-        <h3>Skill Metrics  [self-reported, probably inaccurate]</h3>
-        <div class="skill-bar">
-            <div class="label"><span>Robotics / Control Systems</span><span>95%</span></div>
-            <div class="bar"><div class="fill fill-red" style="width:95%"></div></div>
-        </div>
-        <div class="skill-bar">
-            <div class="label"><span>Software Engineering (Rust / Go / Python)</span><span>90%</span></div>
-            <div class="bar"><div class="fill fill-amber" style="width:90%"></div></div>
-        </div>
-        <div class="skill-bar">
-            <div class="label"><span>CAD / 3D Printing</span><span>85%</span></div>
-            <div class="bar"><div class="fill fill-red" style="width:85%"></div></div>
-        </div>
-        <div class="skill-bar">
-            <div class="label"><span>AI / Computer Vision</span><span>80%</span></div>
-            <div class="bar"><div class="fill fill-amber" style="width:80%"></div></div>
-        </div>
-        <div class="skill-bar">
-            <div class="label"><span>Drawing / Graffiti / Visual Design</span><span>75%</span></div>
-            <div class="bar"><div class="fill fill-red" style="width:75%"></div></div>
-        </div>
-    </div>
-
-    <div class="section-title-wrap" style="margin-left:0">
-        <span class="section-title" style="font-size:18px">Currently building</span>
-        <span class="marker-underline"></span>
-    </div>
-    <div class="build-list">
-        <div class="build-item">
-            <div class="b-title">12-DOF Hexapod Walker</div>
-            <div class="b-status">~ Prototyping</div>
-            <div class="b-desc">Custom inverse kinematics, Raspberry Pi 5, 3D-printed body. Target: uneven terrain traversal.</div>
-        </div>
-        <div class="build-item">
-            <div class="b-title">RT-Sync — Real-Time File Sync Engine</div>
-            <div class="b-status">~ Beta</div>
-            <div class="b-desc">Rust-based block-level sync for workshop file servers. Sub-5ms P99 on LAN.</div>
-        </div>
-        <div class="build-item">
-            <div class="b-title">Filament Dryer Controller V2</div>
-            <div class="b-status">~ Testing</div>
-            <div class="b-desc">ESP32 + PID + humidity sensor. Open-source firmware. Goal: under 10% RH.</div>
-        </div>
-        <div class="build-item">
-            <div class="b-title">Collaborative CAD Editor (Web)</div>
-            <div class="b-status">~ Design</div>
-            <div class="b-desc">WebRTC + CRDT-based collaborative editor. No more file locks.</div>
+    <div class="article-main">
+        <div class="article-body">
+            {{content}}
         </div>
     </div>
 </div>
