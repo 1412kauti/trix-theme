@@ -1,7 +1,10 @@
 {{!< default}}
 
+<!-- Ghost Beta editor validator requires {{#match @page.show_title_and_feature_image}} -->
+{{#match @page.show_title_and_feature_image}}{{/match}}
+
 <div class="about-wrap">
-    {{#match @page.show_title_and_feature_image}}
+    {{#if @page.show_title_and_feature_image}}
     <div class="about-photo">
         <div class="tape-piece top-center"></div>
         <div class="photo-frame">
@@ -35,7 +38,7 @@
             <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
         </div>
     </div>
-    {{/match}}
+    {{/if}}
 
     <div class="about-narrative article-body">
         {{content}}
