@@ -1,7 +1,6 @@
 {{!< default}}
 
 <div class="about-wrap">
-    {{#if @page.show_title_and_feature_image}}
     <div class="about-photo">
         <div class="tape-piece top-center"></div>
         <div class="photo-frame">
@@ -14,28 +13,10 @@
         </div>
         <div class="about-intro">
             <h2>{{title}}</h2>
-            <p>{{excerpt}}</p>
+            {{#if excerpt}}<p>{{excerpt}}</p>{{/if}}
             <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
         </div>
     </div>
-    {{else}}
-    <div class="about-photo">
-        <div class="tape-piece top-center"></div>
-        <div class="photo-frame">
-            {{#if feature_image}}
-            <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
-            {{else}}
-            <span class="initials">KT</span>
-            {{/if}}
-            <span class="sticker">it me</span>
-        </div>
-        <div class="about-intro">
-            <h2>{{title}}</h2>
-            <p>{{excerpt}}</p>
-            <span class="tagline-marker">"I break things on purpose so I can rebuild them better."</span>
-        </div>
-    </div>
-    {{/if}}
 
     <div class="about-narrative article-body">
         {{content}}
