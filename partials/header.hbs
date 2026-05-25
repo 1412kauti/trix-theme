@@ -21,12 +21,14 @@
     <span class="sep">|</span>
     <div class="nav-links">
         {{#foreach @site.navigation}}
+        {{#match slug "!=" "home"}}
         <a href="{{this.url}}" {{#if current}}class="active"{{/if}}>
             <span class="tape-nav-main"></span>
             <span class="tape-nav-cross"></span>
             <span class="tape-nav-edge"></span>
             {{label}}
         </a>
+        {{/match}}
         {{/foreach}}
         <div class="tag-drop" id="tag-drop" onclick="toggleTagMenu(event)">
             <span>Tags</span>
@@ -44,7 +46,6 @@
         </button>
     </div>
     <div class="actions">
-        <a href="{{@site.url}}/signin/" class="btn-outline">Sign In</a>
         <a href="#" class="btn-amber">Donate</a>
         <a href="{{@site.url}}/#/portal/" class="btn-red">Subscribe</a>
     </div>
