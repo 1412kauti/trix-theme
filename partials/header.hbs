@@ -21,13 +21,17 @@
     <span class="sep">|</span>
     <div class="nav-links">
         {{#foreach @site.navigation}}
-        {{#match slug "!=" "home"}}
+        {{#match this.label "!=" "Home"}}
+        {{#match this.label "!=" "home"}}
+        {{#match this.label "!=" "HOME"}}
         <a href="{{this.url}}" {{#if current}}class="active"{{/if}}>
             <span class="tape-nav-main"></span>
             <span class="tape-nav-cross"></span>
             <span class="tape-nav-edge"></span>
             {{label}}
         </a>
+        {{/match}}
+        {{/match}}
         {{/match}}
         {{/foreach}}
         <div class="tag-drop" id="tag-drop" onclick="toggleTagMenu(event)">
